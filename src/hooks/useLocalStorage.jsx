@@ -3,7 +3,14 @@ import { useEffect, useState } from "react";
 const LOCAL_STORAGE_KEY = "todo_list";
 
 export default function useLocalStorage() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([
+    {
+      id: 99,
+      title: "screw up",
+      datetime: "July 01, 2021 11:17:36 AM",
+      body: "inivite on a date",
+    },
+  ]);
 
   function loadSavedposts() {
     const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
